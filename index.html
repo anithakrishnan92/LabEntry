@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .box1 {
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 49.5%;
+        background-color: black;
+        border: 3px solid rgb(11, 183, 196);
+        animation-name: slidein;
+        animation-duration: 3s;
+      }
+      @keyframes slidein {
+        from {
+          margin-right: 50%;
+          width: 50%;
+        }
+        to {
+          margin-left: 0%;
+          width: 10%;
+        }
+      }
+
+      .box2 {
+        margin-right: 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 49.5%;
+        background-color: black;
+        border: 3px solid rgb(11, 183, 196);
+        animation-name: slideout;
+        animation-duration: 3s;
+      }
+      @keyframes slideout {
+        from {
+          margin-right: 50%;
+          width: 50%;
+        }
+        to {
+          margin-right: 0%;
+          width: 10%;
+        }
+      }
+
+      .plus {
+        text-align: center;
+        position: absolute;
+        border-radius: 50%;
+        background-color: black;
+        /* background: blue; */
+        width: 280px;
+        height: 280px;
+        top: 230px;
+        left: calc(49.5% - 130px);
+        opacity: 1;
+        z-index: 999;
+        border: 5px solid rgb(11, 183, 196);
+        box-shadow: 8px 8px 7px outset rgb(11, 196, 125);
+      }
+      .container {
+        width: 100%;
+        max-width: 1400px;
+        margin: auto;
+        position: relative;
+      }
+      .image {
+        background-color: black;
+        margin-top: 5px;
+      }
+      .size {
+        margin-left: 30px;
+        width: 200px;
+        height: 25px;
+      }
+      .container-circles {
+        width: 180px;
+        height: 180px;
+        padding: 0;
+        /* border-radius: 50%; */
+        background: #2980b9;
+        /* transition: 0.2s linear border-radius 0.4s, 0.2s linear background 0.4s; */
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand">Navbar</a>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>       -->
+
+    <div class="container">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide d-inline-block box1 vh-100"
+        data-bs-ride="carousel"
+        id="slide-left"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">Box1</div>
+        </div>
+      </div>
+
+      <div class="rounded-circle plus d-inline-block container-circle">
+        <img
+          src="imgs/fp3.jpg"
+          alt="no img"
+          class="image"
+          style="color: white; width: 60px; height: 80px"
+        />
+        <!-- <i class="fa-regular fa-fingerprint fa-xl" style="color: white"></i> -->
+
+        <form method="post" action="home.html">
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Enter Password</label
+            >
+            <input
+              type="password"
+              class="form-control size"
+              id="exampleInputPassword1"
+              value="personal"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary hover"
+            onClick="myAnimi()"
+          >
+            Enter Lab
+          </button>
+        </form>
+      </div>
+
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide d-inline-block box2 vh-100"
+        data-bs-ride="carousel"
+        id="slide-right"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">Box2</div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascriptfile.js"></script>
+  </body>
+</html>

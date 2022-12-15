@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        text-align: center;
+        background-color: aquamarine;
+        animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+      }
+      p{
+        display:inline-flex;
+        align-items:center;
+        height:70px;
+        width:200px;
+        color:black;
+        background-color: #fff;
+      }
+      #countdown{
+        color:black;
+      }
+      .autologouttimer {
+        position: relative;
+        margin: 0 auto;
+        padding: 3px 0;
+        width: 275px;
+        height: 30px;
+        background-color: transparent;
+        text-align: center;
+        -webkit-box-shadow: inset -2px -2px 0px 0px rgba(250, 250, 250, 0.75);
+        -moz-box-shadow: inset -1px -1px 0px 0px rgba(250, 250, 250, 0.75);
+        box-shadow: inset -1px -1px 0px 0px rgba(250, 250, 250, 0.75);
+        background-color: rgb(143, 143, 143);
+        border-radius: 15px;
+      }
+
+      .color-red {
+        background-color: #ea8181;
+      }
+
+      .progressbar {
+        float: left;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        margin: 5px;
+        width: 263px;
+        height: 16px;
+        border: 0px;
+        border-radius: 15px;
+      }
+
+      .autologouttimer span {
+        font-family: "Arimo", sans-serif;
+        font-weight: bold;
+        color: #fff;
+        font-size: 12px;
+        line-height: 12px;
+        position: relative;
+      }
+
+      #progressbar-css {
+        /* Change time here to make the animation longer */
+        -webkit-animation: logouttiming 60s normal linear;
+        -moz-animation: logouttiming 60s normal linear;
+        animation: logouttiming 60s normal linear;
+      }
+
+      @-webkit-keyframes logouttiming {
+        0% {
+          width: 263px;
+        }
+        100% {
+          width: 0;
+        }
+      }
+
+      @-moz-keyframes logouttiming {
+        0% {
+          width: 263px;
+        }
+        100% {
+          width: 0;
+        }
+      }
+
+      @keyframes logouttiming {
+        0% {
+          width: 263px;
+        }
+        100% {
+          width: 0;
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body  onload="myAnimi()">
+    <h1>Welcome XXX!!!</h1>
+    <form action="index.html">
+      <button type="submit" class="btn btn-primary" id="logoutForm">
+        Logout
+      </button><br/><br/><br/>
+    </form>
+    <div class="autologouttimer">
+      <div id="progressbar-css" class="progressbar color-red"></div>
+      <span>1 Min.</span></br>
+    </div>
+
+    <h6>Remaining time left...</h6>
+     <p id="countdown"></p>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    >
+ 
+    </script>
+    <script src="javascriptfile.js"></script>
+  </body>
+</html>
